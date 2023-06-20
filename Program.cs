@@ -16,3 +16,20 @@ for(int i=0;i<N;i++)
 Console.WriteLine("My lord, now we are ready to do our dark and terrible deeds");
 Console.WriteLine($"HERE IS IT: {ShowArray(InitArr)}");
 
+int counter = 0;
+Console.WriteLine("Let me find the number of not long enough and evil spells...");
+for(int i=0;i<N;i++)
+    if (InitArr[i].Length <= 3) counter++;
+Console.WriteLine($"Oh, there are only {counter}...");
+Console.WriteLine("Well, let's make a pitiful list of them");
+
+string[] FinalArr = new string[counter];
+int j=0;
+for(int i=0;i<N;i++)
+{
+    if(InitArr[i].Length<=3) FinalArr[j++] = InitArr[i];
+}
+
+Console.WriteLine($"Here they are, insignificant creatures: {ShowArray(FinalArr)}");
+
+
